@@ -19,12 +19,15 @@ const contains = function(obj, val) {
         if(contains(obj[key], val)) return true;
       // }
     } 
-    // else {
-    //   console.log(key + ':' + obj[key] );
-    // }
+    else {
+      console.log(key + ':' + obj[key] );
+    }
   }
   return false;
 };
+
+//console.log(contains({ a: 1, b: { a: [5, 10], b: 11 } }));
+console.log(contains([[[5], 3], 0, 2, ['foo'], [], [4, [5, 6]]]));
 
 // do not edit below this line
 module.exports = contains;
